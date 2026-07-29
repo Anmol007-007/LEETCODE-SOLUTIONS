@@ -1,1 +1,12 @@
-select e.name,b.bonus from employee e left join bonus b on e.empid=b.empid where b.bonus<1000 or e.empid not in (select empid from bonus)
+select 
+    e.name,b.bonus 
+from 
+    employee e 
+left join 
+    bonus b 
+on 
+    e.empid=b.empid 
+where 
+    b.bonus<1000 
+    or 
+    b.bonus is null
