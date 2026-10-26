@@ -5,21 +5,21 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:
+    def deleteNode(self, root: TreeNode | None, key: int) -> TreeNode | None:
         if not root:
             return None
         if key<root.val:
-            root.left=self.deleteNode(root.left,key)
+            root.left= self.deleteNode(root.left,key)
         elif key>root.val:
-            root.right=self.deleteNode(root.right,key)
+            root.right = self.deleteNode(root.right,key)
         else:
             if not root.left:
                 return root.right
             if not root.right:
                 return root.left
-            temp=root.right
-            while temp.left:
-                temp=temp.left
-            root.val=temp.val
-            root.right=root.right=self.deleteNode(root.right,temp.val)
+            curr=root.right
+            while curr.left:
+                curr=curr.left
+            root.val=curr.val
+            root.right=self.deleteNode(root.right,curr.val)
         return root
