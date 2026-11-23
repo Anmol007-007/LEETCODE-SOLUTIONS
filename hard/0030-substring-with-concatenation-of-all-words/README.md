@@ -62,8 +62,8 @@ The substring starting at 12 is `"thefoobar"`. It is the concatenation of `["the
 
 **Language:** Python  
 **Runtime:** 21 ms (beats 84.10%)  
-**Memory:** 19.7 MB (beats 75.18%)  
-**Submitted:** 2026-11-23T06:07:02.638Z  
+**Memory:** 20 MB (beats 10.36%)  
+**Submitted:** 2026-11-23T06:07:35.337Z  
 
 ```py
 from typing import List
